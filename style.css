@@ -1,0 +1,113 @@
+/* styles.css */
+/* Glassmorphism and sleek UI for AI Finance Advisor */
+
+[data-testid="stAppViewContainer"] {
+    background-color: #0e1117;
+    color: #e0e0e0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #1a1c24;
+    padding-top: 2rem;
+    border-right: 1px solid #2d3139;
+}
+
+h1, h2, h3, h4 {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Metric Cards */
+.metric-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-align: center;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.metric-value.good { color: #4CAF50; }
+.metric-value.warning { color: #FFC107; }
+.metric-value.critical { color: #F44336; }
+.metric-value.neutral { color: #2196F3; }
+
+.metric-label {
+    font-size: 0.85rem;
+    color: #a0aab2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Advice Sections */
+.advice-section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #4CAF50;
+}
+
+.advice-section h3 {
+    margin-top: 0;
+    color: #4CAF50;
+    font-size: 1.25rem;
+}
+
+/* Chatbot Styles Customization */
+.stChatMessage {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stChatMessage[data-testid="stChatMessage"]:nth-child(even) {
+    background-color: rgba(33, 150, 243, 0.05) !important;
+    border-left: 3px solid #2196F3;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #45a049 0%, #388E3C 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+HR {
+    border-color: rgba(255, 255, 255, 0.1);
+}
