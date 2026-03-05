@@ -14,5 +14,8 @@ st.title("AI Financial Advisor")
 question = st.text_input("Ask a financial question")
 
 if question:
-    response = model.generate_content(question)
-    st.write(response.text)
+    try:
+        response = model.generate_content(question)
+        st.write(response.text)
+    except Exception as e:
+        st.error("API limit reached or error occurred. Try again later.")
