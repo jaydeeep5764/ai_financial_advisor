@@ -1,6 +1,12 @@
 import streamlit as st
+
 import pandas as pd
 import json
+import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+from financial_analysis import analyze_finances
+
 
 from config import get_gemini_model, GEMINI_API_KEY
 from finance_analysis import generate_financial_summary
@@ -16,8 +22,19 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+
 # Load Custom CSS
 def load_css():
+
+model = genai.GenerativeModel("gemini-2.0-flash")
+
+st.title("AI Financial Advisor")
+result = analyze_finances(user_data)
+st.write(result)
+question = st.text_input("Ask a financial question")
+
+if question:
+
     try:
         with open("styles.css") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
