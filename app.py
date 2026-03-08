@@ -26,13 +26,16 @@ st.set_page_config(
 # Load Custom CSS
 def load_css():
 
-model = genai.GenerativeModel("gemini-2.0-flash")
+    model = genai.GenerativeModel("gemini-2.0-flash")
 
 st.title("AI Financial Advisor")
-result = analyze_finances(user_data)
-st.write(result)
+#result = analyze_finances(user_data)
+#st.write(result)
 question = st.text_input("Ask a financial question")
 
+
+#result = analyze_finances(user_data)
+#st.write(result)
 if question:
 
     try:
@@ -90,6 +93,13 @@ with st.sidebar.form("financial_form"):
 
 # On Submit
 if submit_button:
+    user_data = {
+    "income": income,
+    "expenses": expenses,
+    "savings": savings,
+    "debt_payments": debt_payments,
+    "emergency_fund": current_ef
+}
     summary = generate_financial_summary(income, expenses, savings, debt_payments, current_ef)
     st.session_state['summary'] = summary
     st.session_state['risk_tolerance'] = risk_tolerance
