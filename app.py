@@ -31,18 +31,18 @@ def load_css():
 st.title("AI Financial Advisor")
 #result = analyze_finances(user_data)
 #st.write(result)
-question = st.text_input("Ask a financial question")
+#question = st.text_input("Ask a financial question")
 
 
 #result = analyze_finances(user_data)
 #st.write(result)
-if question:
+#if question:
 
-    try:
-        with open("styles.css") as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    except FileNotFoundError:
-        pass
+ #   try:
+  #      with open("styles.css") as f:
+   #         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    #except FileNotFoundError:
+     #   pass
 
 load_css()
 
