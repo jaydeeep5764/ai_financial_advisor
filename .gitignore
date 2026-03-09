@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 
 # Environment variables
-.env
 
 # Virtual environment
 venv/
@@ -12,3 +11,5 @@ venv/
 # OS junk
 .DS_Store
 Thumbs.db
+config.bat
+node_modules
